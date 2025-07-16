@@ -21,11 +21,10 @@ export default function ImageContainer(){
 
    
     return(
-      <div>
-        {data?.map((item)=>{
+      <div className="grid grid-cols-3 gap-2 w-full place-items-center">
+        {data?.slice(0,6).map((item)=>{
             return (
-                <div key={item.id} className="max-5xl grid grid-cols-3">
-
+                <div key={item.id} className="w-[200px] h-[240px] mt-1">
               <Image src={item.urls.regular} alt={item.alt_description||item.slug} width={item.width} height={item.height}/>
                 </div>
             )
