@@ -10,14 +10,14 @@ export default function Results() {
   if (!context) {
     throw new Error("Context not found ");
   }
-  const { searchValue,setSearchValue } = context;
+  const { searchValue } = context;
 
   return (
     <>
       <header className="bg-[#DDE3EA] w-full p-20">
         <Link href={"/"} className="flex gap-1 items-center cursor-pointer font-bold text-2xl sm:text-3xl">
           <ArrowLeft />
-          <h1 >Search for result "{searchValue}"</h1>
+          <h1 >Search for result {searchValue}</h1>
         </Link>
       </header>
       <main>

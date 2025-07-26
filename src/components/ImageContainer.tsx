@@ -1,10 +1,9 @@
 "use client";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
 import Image from "next/image";
 import { UnsplashPhoto } from "@/types";
 import Skeleton from "react-loading-skeleton";
-import { SearchContext } from "@/context/SearchContext";
 import { Modal } from "./Modal";
 
 type Prop = {
@@ -12,11 +11,7 @@ type Prop = {
 };
 
 export default function ImageContainer({ query }: Prop) {
-  const context = useContext(SearchContext);
-  if (!context) {
-    throw new Error("Context not found");
-  }
-  const { setSearchValue } = context;
+
 
   const [data, setData] = useState<UnsplashPhoto[]>();
   const [loading, setLoading] = useState(true);

@@ -1,16 +1,12 @@
 import Image from "next/image"
 import {
   Dialog,
-  DialogClose,
+
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
   DialogTitle,
-  DialogTrigger,
+
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { UnsplashPhoto } from "@/types"
+
 
 type ModalType = {
     name:string,

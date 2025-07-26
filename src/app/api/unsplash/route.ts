@@ -22,7 +22,7 @@ export async function GET(req: Request) {
     });
 
     return NextResponse.json(response.data);
-  } catch (error: any) {
+  } catch (error:any) {
     console.error("Unsplash API error:", error.response?.data || error.message);
     return NextResponse.json({ error: "Failed to fetch from Unsplash" }, { status: 500 });
   }
