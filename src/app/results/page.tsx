@@ -17,7 +17,7 @@ export default function Results() {
       <h1>Search for result {searchValue}</h1>
     </header>
     <main>
-      <ImageContainer/>
+      <ImageContainer query={searchValue}/>
 
     </main>
     </>

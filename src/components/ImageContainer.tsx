@@ -3,21 +3,33 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 import Image from "next/image"
 import { UnsplashPhoto } from "@/types"
+import fetchData from "@/utils/fetchData"
 
 
+type Prop = {
+  query?:string
+}
 
-export default function ImageContainer(){
+
+export default function ImageContainer({query}:Prop){
     const [data,setData] = useState<UnsplashPhoto[]>()
 
     useEffect( () =>{
-        const fetchData =async(query:string)=>{
-            const res = await axios.get(`https://api.unsplash.com/search/photos/?query=${query}&client_id=${process.env.NEXT_PUBLIC_ACCESS_KEY}`)
-            setData(res?.data.results.slice(0,10))
+        const fetchData =async()=>{
+          const searchQuery = query || "african";
+            const res = await axios.get(`/api/unsplash?query=${searchQuery}`)
+            setData(res?.data.results.slice(0,8))
 
         }
-        fetchData("african")
+        fetchData()
         
-    },[])
+        
+    },[query])
+
+  
+
+
+    
 
    
     return(

@@ -31,7 +31,7 @@ export default function Home() {
       </form>
     </header>
     <main>
-      <ImageContainer/>
+      <ImageContainer />
     </main>
     </>
   );
