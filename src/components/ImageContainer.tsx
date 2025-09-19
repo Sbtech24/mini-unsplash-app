@@ -24,6 +24,7 @@ export default function ImageContainer({ query }: Prop) {
       try {
         const res = await axios.get(`/api/unsplash?query=${searchQuery}`);
         setData(res?.data.results.slice(0, 8));
+       
       } catch (error) {
         console.log(error);
       } finally {
@@ -70,7 +71,7 @@ export default function ImageContainer({ query }: Prop) {
           width={selectedImage.width}
           height={selectedImage.height}
           location={selectedImage.user.location}
-          img={selectedImage.urls.regular}
+          img={selectedImage.urls.full|| selectedImage.urls.regular}
           alt={selectedImage.alt_description || selectedImage.slug}
           open={true}
           onOpenChange={() => setSelectedImage(null)}
