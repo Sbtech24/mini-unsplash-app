@@ -22,8 +22,7 @@ export function Modal({
   img,
   location,
   alt,
-  width,
-  height,
+
   open,
   onOpenChange,
 }: ModalType) {
