@@ -36,7 +36,7 @@ export default function ImageContainer({ query }: Prop) {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto place-items-center">
+      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto place-items-center">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => (
               <Skeleton

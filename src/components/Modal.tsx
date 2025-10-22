@@ -25,7 +25,6 @@ export function Modal({name,img,location,alt,width,height,open,onOpenChange}:Mod
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <div className="max-w-fit">
-      
         <DialogContent className="max-w-fit w-max px-0 pt-0">
           <VisuallyHidden>
            <DialogTitle/>

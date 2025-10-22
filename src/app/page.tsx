@@ -33,7 +33,7 @@ export default function Home() {
   
     <header className="relative bg-[#DDE3EA] w-full p-20">
       <form onSubmit={handleSubmit}>
-      <Input placeholder="Search for Photo" className="max-w-1/2 bg-white mx-auto" value={searchValue} onChange={handleSearch}/>
+      <Input placeholder="Search for Photo" className="sm:max-w-1/2 bg-white mx-auto" value={searchValue} onChange={handleSearch}/>
       </form>
     </header>
     <main className="absolute top-38 left-0 right-0 mb-4 ">

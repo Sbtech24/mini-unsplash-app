@@ -19,6 +19,10 @@ export async function GET(req: Request) {
       headers: {
         Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`, 
       },
+      adapter:"fetch",
+      fetchOptions:{
+        cache:"force-cache"
+      }
     });
 
     return NextResponse.json(response.data);
